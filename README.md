@@ -1,6 +1,6 @@
 # 특허분야 한국어 AI언어모델 KorPatELECTRA
 KorPatELECTRA(Korean Patent ELECTRA)는 [한국특허정보원](https://www.kipi.or.kr)이 연구개발한 AI 언어모델입니다. 
-<br>특허분야 한국어 자연어처리 문제 해결 및 특허산업분야의 지능정보화 인프라 마련을 위해 기존 [Google ELECTRA](https://github.com/google-research/electra) 모델의 아키텍쳐를 기반으로 대용량 국내 특허문헌(약 만건, 문장, 억 토큰, GB)을 사전학습(pre-training)하였고, 무료로 제공하고 있습니다.
+<br>특허분야 한국어 자연어처리 문제 해결 및 특허산업분야의 지능정보화 인프라 마련을 위해 기존 [Google ELECTRA](https://github.com/google-research/electra) 모델의 아키텍쳐를 기반으로 대용량 국내 특허문헌(약 466만 문헌, 5.4억 문장, 445억 토큰, 130GB)을 사전학습(pre-training)하였고, 무료로 제공하고 있습니다.
 
 ## 
 - [1. KorPatELECTRA](#1-korpatelectra)
@@ -32,24 +32,24 @@ KorPatELECTRA(Korean Patent ELECTRA)는 [한국특허정보원](https://www.kipi
 #### 개발환경
 - Anaconda >=4.6.8
 - Python >= 3.6
-- MSP Tokenizer(Mecab-ko Sentencepiece Patent Tokenizer)
+- MWP Tokenizer(Mecab-ko wordpiece Patent Tokenizer)
 - Tensorflow-gpu >= 1.15.0
-- Sentencepiece >= 0.1.96
-- Horovod >= 0.19.2
+
 #### 학습환경
-- 특허문헌 120GB 코퍼스의 4억 6천만 문장 학습
-- NVIDIA V100 32GB GPU 16개로 분산학습 라이브러리 Horovod를 이용하여 학습
-- NVIDIA AMP(Automated Mixed Precision) 방식을 활용하여, 메모리 최적화
-- 128 Sequence 2,300,000 Step 학습 + 512 Sequence 750,000 Step 학습
+- 특허문헌 130GB 코퍼스의 5억 4천만 문장을 학습
+- NVIDIA V100 32GB GPU 16개로 tensorflow의 mirrored strategy 병렬학습
+- 128 train vaech size, 100만 step 학습
 
 ### 2-2. 코퍼스
-- 특허문헌수 : 건
-- 문장 수 : 건
-- 토큰 수 : 약 억건
-- 코퍼스 크기 : 약 GB
+- 특허문헌수 : 4,661,158문헌
+- 문장 수 : 546,496,725문장
+- 토큰 수 : 44,525,763,134건
+- 코퍼스 크기 : 약 130GB
 
 ### 2-3. 사전 및 토크나이저
-
+- 토크나이저 : 한국어 형태소분석기 Mecab-ko를 사용하여 형태소 단위로 pre-tokenizing 후 wordpiece 방식으로 vocab 생성
+- vocab size : 35000개
+- special token : [PAD],[UNK],[CLS],[SEP],[MASK]
 
 ### 2-4. 평가
 - 특허데이터 기반 CPC 분류 태스크
