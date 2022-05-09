@@ -24,7 +24,7 @@ KorPatELECTRA(Korean Patent ELECTRA)는 [한국특허정보원](https://www.kipi
 특허분야 특화된 고성능 사전학습(pre-trained) 언어모델로 다양한 자연어처리 태스크에서 활용 할 수 있습니다.
 
 &nbsp;
-![KorPatBERT](./imgs/korpatbert.png)
+![KorPatELECTRA](./imgs/korpatelectra.png)
 
 &nbsp;
 ## 2. KorPatELECTRA 개요
