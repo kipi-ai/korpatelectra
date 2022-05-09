@@ -52,8 +52,12 @@ KorPatELECTRA(Korean Patent ELECTRA)는 [한국특허정보원](https://www.kipi
 - special token : [PAD],[UNK],[CLS],[SEP],[MASK]
 
 ### 2-4. 평가
-- 특허데이터 기반 CPC 분류 태스크
-	- 144 labels, train data 351,487, dev data 39,053, test data 16,316
+- 특허데이터 기반 자연어처리 태스크
+|<center>모델</center>|<center>vocab len</center>|<center>Patent NER(F1)</center>|<center>CPC code classification(ACC)</center>|<center>PatQuAD(EM/F1)</center>|
+|:--:|:--:|:--:|:--:|:--:|
+|Google BERT|11만|87.98|72.33|51.63|81.36|
+|KoELECTRA|35000|87.47|72.98|72.45|88.09
+|<b>KorPatELECTRA</b>|<b>35000</b>|<b>91.01</b>|<b>73.90</b>|<b>89.85</b>|
 
 
 &nbsp;
