@@ -56,7 +56,7 @@ KorPatELECTRA(Korean Patent ELECTRA)는 [한국특허정보원](https://www.kipi
 ### 2-4. 평가
 - 특허데이터 기반 자연어처리 태스크
 
-|<center>모델</center>|<center>vocab len</center>|<center>Patent NER(F1)</center>|<center>CPC code classification(ACC)</center>|<center>PatQuAD(EM/F1)</center>|
+|<center>모델</center>|<center>vocab len</center>|<center>Patent NER</br>(F1)</center>|<center>CPC code classification(ACC)</center>|<center>PatQuAD(EM/F1)</center>|
 |:--:|:--:|:--:|:--:|:--:|
 |Google BERT|11만|87.98|72.33|51.63|81.36|
 |KoELECTRA|35000|87.47|72.98|72.45|88.09
@@ -71,7 +71,7 @@ KorPatELECTRA(Korean Patent ELECTRA)는 [한국특허정보원](https://www.kipi
 
 	
 ### 3-3. 파인튜닝
-※ [Google electra](https://github.com/google-research/electra) 학습 방식과 동일하며, 사용 예시는
+※ [Google electra](https://github.com/google-research/electra) 모델학습 방식과 동일
 
 &nbsp;
 ## 4. KorPatELECTRA 정책 및 제공
