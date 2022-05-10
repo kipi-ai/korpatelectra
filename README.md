@@ -47,9 +47,11 @@ KorPatELECTRA(Korean Patent ELECTRA)는 [한국특허정보원](https://www.kipi
 - 코퍼스 크기 : 약 130GB
 
 ### 2-3. 사전 및 토크나이저
-- 토크나이저 : 한국어 형태소분석기 Mecab-ko를 사용하여 형태소 단위로 pre-tokenizing 후 wordpiece 방식으로 vocab 생성
-- vocab size : 35000개
-- special token : [PAD],[UNK],[CLS],[SEP],[MASK]
+언어모델 학습에 사용된 특허문헌을 대상으로 약 666만개의 주요 명사 및 복합명사를 추출하였으며, 이를 한국어 형태소분석기 Mecab-ko의 사용자 사전에 추가 후 WordPiece를 통하여 Subword로 분할하는 방식의 특허 텍스트에 특화된 MWP 토크나이저(Mecab-ko Wordpiece Patent Tokenizer)입니다.
+- Mecab-ko 특허 사용자 사전파일명 : pat_all_mecab_dic.csv (6,663,693개 용어)
+- WordPiece 사전파일명 : vocab.txt  (35,000개 토큰)
+- WordPiece 스페셜 토큰 : [PAD], [UNK], [CLS], [SEP], [MASK]
+
 
 ### 2-4. 평가
 - 특허데이터 기반 자연어처리 태스크
