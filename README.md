@@ -58,9 +58,9 @@ KorPatELECTRA(Korean Patent ELECTRA)는 [한국특허정보원](https://www.kipi
 
 |<center>모델</center>|<center>vocab len</center>|<center>Patent NER</br>(F1)</center>|<center>CPC code classification</br>(ACC)</center>|<center>PatQuAD</br>(EM/F1)</center>|
 |:--:|:--:|:--:|:--:|:--:|
-|Google BERT|11만|87.98|72.33|51.63|81.36|
-|KoELECTRA|35000|87.47|72.98|72.45|88.09
-|<b>KorPatELECTRA</b>|<b>35000</b>|<b>91.01</b>|<b>73.90</b>|<b>89.85</b>|
+|Google BERT|11만|87.98|72.33|51.63/81.36|
+|KoELECTRA|35000|87.47|72.98|72.45/88.09|
+|<b>KorPatELECTRA</b>|<b>35000</b>|<b>91.01</b>|<b>73.90<b>|<b>77.47/89.85</b>|
 
 
 &nbsp;
