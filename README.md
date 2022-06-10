@@ -1,8 +1,6 @@
 # 특허분야 한국어 AI언어모델 KorPatELECTRA
 KorPatELECTRA(Korean Patent ELECTRA)는 [한국특허정보원](https://www.kipi.or.kr)이 연구개발한 AI 언어모델입니다. 
 <br>특허분야 한국어 자연어처리 문제 해결 및 특허산업분야의 지능정보화 인프라 마련을 위해 기존 [Google ELECTRA](https://github.com/google-research/electra) 모델의 아키텍쳐를 기반으로 대용량 국내 특허문헌(약 466만 문헌, 5.4억 문장, 445억 토큰, 130GB)을 사전학습(pre-training)하였고, 무료로 제공하고 있습니다.
-
-&nbsp;
 - [KorPatELECTRA 논문](https://www.koreascience.or.kr/article/JAKO202209537230844.page)
 &nbsp;
 
@@ -25,7 +23,7 @@ KorPatELECTRA(Korean Patent ELECTRA)는 [한국특허정보원](https://www.kipi
  
 &nbsp;
 ## 1. KorPatELECTRA
-2020년에 공개된 [Google ELECTRA Base](https://github.com/google-research/electra) 모델의 아키텍쳐를 기반으로, 대량의 한국어 특허문헌 코퍼스를 사전 학습한 언어모델로, 다양한 특허 자연어처리 태스크에 활용이 가능한 모델이다.
+2020년에 공개된 [Google ELECTRA Base](https://github.com/google-research/electra) 모델의 아키텍쳐를 기반으로, 대량의 한국어 특허문헌 코퍼스를 사전 학습한 언어모델로, 다양한 특허 자연어처리 태스크에 활용이 가능한 모델입니다.
 
 &nbsp;
 ![KorPatELECTRA](./imgs/korpatelectra.png)
@@ -35,14 +33,15 @@ KorPatELECTRA(Korean Patent ELECTRA)는 [한국특허정보원](https://www.kipi
 ### 2-1. 사전학습 환경
 #### 개발환경
 - Anaconda >=4.6.8
-- Python >= 3.6
-- MWP Tokenizer(Mecab-ko wordpiece Patent Tokenizer)
+- Python >= 3.7.11
 - Tensorflow-gpu >= 1.15.0
+- tokenizers == 0.10.3 (BertWordPieceTokenizer)
+- MWP Tokenizer(Mecab-ko Wordpiece Patent Tokenizer)
 
 #### 학습환경
 - 특허문헌 130GB 코퍼스의 5억 4천만 문장을 학습
-- NVIDIA V100 32GB GPU 16개로 tensorflow의 mirrored strategy 병렬학습
-- 128 train vaech size, 100만 step 학습
+- NVIDIA V100 32GB GPU 16개로 tensorflow의 mirrored strategy 및 Horovod를 이용하여 학습
+- NVIDIA AMP (Automated Mixed Precision) 방식을 활용하여, 메모리 최적화
 
 ### 2-2. 코퍼스
 - 특허문헌수 : 4,661,158문헌
@@ -51,9 +50,10 @@ KorPatELECTRA(Korean Patent ELECTRA)는 [한국특허정보원](https://www.kipi
 - 코퍼스 크기 : 약 130GB
 
 ### 2-3. 사전 및 토크나이저
-언어모델 학습에 사용된 특허문헌을 대상으로 약 666만개의 주요 명사 및 복합명사를 추출하였으며, 이를 한국어 형태소분석기 Mecab-ko의 사용자 사전에 추가 후 WordPiece를 통하여 Subword로 분할하는 방식의 특허 텍스트에 특화된 MWP 토크나이저(Mecab-ko Wordpiece Patent Tokenizer)입니다.
+언어모델 학습에 사용된 특허공보 466만건을 대상으로 Soynlp 라이브러리를 이용하여 약 660만개의 명사 및 복합명사를 추출하였으며, 이를 Mecab-ko의 사용자 사전에 추가 후 WordPiece를 통하여 Subword로 분할하는 방식의 토크나이저를 사용하였습니다.
+사용자 편의를 위해 [Google BERT](https://github.com/google-research/bert/blob/master/tokenization.py)의 토크나이저 파일을 그대로 사용 가능하며 torch에서는 Huggingface의 BertWordPieceTokenizer를 사용할 수 있습니다.
 - Mecab-ko 특허 사용자 사전파일명 : pat_all_mecab_dic.csv (6,663,693개 용어)
-- WordPiece 사전파일명 : vocab.txt  (35,000개 토큰)
+- WordPiece 사전파일명 : vocab.txt (35,000개 토큰)
 - WordPiece 스페셜 토큰 : [PAD], [UNK], [CLS], [SEP], [MASK]
 
 
