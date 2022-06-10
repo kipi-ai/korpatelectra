@@ -58,7 +58,8 @@ KorPatELECTRA 관련 내용은 [KorPatELECTRA 논문](https://www.koreascience.o
 
 
 ### 2-4. 평가
-ELECTRA가 BERT 보다 모든 태스크에서 높은 성능을 보였고, KorPatBERT는 특허 CPC분류에서 높은 성능능 달성하였습니다.
+ELECTRA가 BERT 보다 모든 태스크에서 높은 성능을 보였고, KorPatBERT는 특허 CPC분류에서 높은 성능을 보였습니다.
+
 특히, KorPatELECTRA는 특허분야 학습 데이터 셋에서 가장 높은 성능 달성하였습니다.
 |<center> </center>|<center>vocab size</center>|<center>NER</br>(화학 특허)</center>|<center>Classification</br>(특허 CPC분류)</center>|<center>MRC</br>(PatQuAD)</center>|
 |:--:|:--:|:--:|:--:|:--:|
@@ -84,7 +85,9 @@ ELECTRA가 BERT 보다 모든 태스크에서 높은 성능을 보였고, KorPat
 	
 
 ### 3-2. 토크나이저
-Tokenizer를 사용하기 위해서는 Mecab-ko 프로그램이 필수적으로 설치 요구되며, 제공된 특허 사용자사전이 Mecab에 추가 된다면 성능 향상에 더욱 효과적이다. 
+Tokenizer를 사용하기 위해서는 Mecab-ko 프로그램이 필수적으로 설치 요구되며, 제공된 특허 사용자사전이 Mecab에 추가 된다면 성능 향상에 더욱 효과적입니다.
+	
+	
 	from konlpy.tag import Mecab
 	import tokenizer as tokenization
 
@@ -136,6 +139,20 @@ Google electra에서 공개한 학습 방식과 동일하며, torch버전으로�
 4. 추후 본 언어모델을 활용하여 상업적 용도로의 사용을 위해서는 라이센스부분을 추가 작성하여 담당자에 보내주시면 관련내용 협의 후 진행이 가능합니다.
    
 ####  제공 파일
+|<center>경로</centeer>|<center>파일명</centeer>|<center>설명</centeer>|
+|:--:|:--:|:--:|
+|/|pat_all_mecab_dic.csv|Mecab 특허사용자 사전|
+|/|vocab.txt|Vocabulary 파일|
+|/|tokenize.py|Tokenizer 파일(Bert tokenizer 동일)|
+|KorPatELECTRA/PT|pytorch_model.bin|torch 버전의 사전학습 언어모델|
+|KorPatELECTRA/PT|config.json|설정 파일|
+|KorPatELECTRA/PT|tokenizer_config.json|설정 파일|
+|KorPatELECTRA/TF|model.ckpt-1000000.data-00000-of-00001|tensorflow 버전의 사전학습 언어모델|
+|KorPatELECTRA/TF|model.ckpt-1000000.index|tensorflow 버전의 사전학습 언어모델|
+|KorPatELECTRA/TF|model.ckpt-1000000.meta|tensorflow 버전의 사전학습 언어모델|
+
+	
+	
 ### 4-2. 사용신청서
 모델 및 코드를 사용하고자 하시면 사용신청서를 작성하여 제출해주세요.
 
