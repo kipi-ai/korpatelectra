@@ -1,7 +1,7 @@
 # 특허분야 한국어 AI언어모델 KorPatELECTRA
 KorPatELECTRA(Korean Patent ELECTRA)는 [한국특허정보원](https://www.kipi.or.kr)이 연구개발한 AI 언어모델입니다. 
 <br>특허분야 한국어 자연어처리 문제 해결 및 특허산업분야의 지능정보화 인프라 마련을 위해 기존 [Google ELECTRA](https://github.com/google-research/electra) 모델의 아키텍쳐를 기반으로 대용량 국내 특허문헌(약 466만 문헌, 5.4억 문장, 445억 토큰, 130GB)을 사전학습(pre-training)하였고, 무료로 제공하고 있습니다.
-KorPatELECTRA 관련 내용은 [KorPatELECTRA 논문](https://www.koreascience.or.kr/article/JAKO202209537230844.page)에서 확인 할 수 있습니다.
+KorPatELECTRA 관련 내용은 [KorPatELECTRA 논문](https://www.koreascience.or.kr/article/JAKO202209537230844.pdf)에서 확인 할 수 있습니다.
 &nbsp;
 
 ## 
