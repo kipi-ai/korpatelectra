@@ -161,7 +161,7 @@ Google electra에서 공개한 학습 방식과 동일하며, torch버전으로�
 
 ### 4-4. 관련 서식
  - 언어모델 사용신청서([한글ver(1)](./docs/한국특허정보원_언어모델_사용신청서_한글.hwp), [워드ver(2)](./docs/한국특허정보원_언어모델_사용신청서_워드.hwp))
- - [KorPatELECTRA 사용협약서(3)](./docs/한국특허정보원_언어모델_KorPatELECTRA_사용협약서.pdf)
+ - [KorPatELECTRA 사용협약서](./docs/한국특허정보원_언어모델_KorPatELECTRA_사용협약서.pdf)
  - [상업용 라이선스 안내](./docs/특허정보원_언어모델_상업용_라이선스_안내.pdf)
 
 	
