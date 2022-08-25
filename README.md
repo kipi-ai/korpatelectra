@@ -11,15 +11,15 @@ KorPatELECTRA 관련 내용은 [KorPatELECTRA 논문](https://www.koreascience.o
   - [2-2. 코퍼스](#2-2-코퍼스)
   - [2-3. 사전 및 토크나이저](#2-3-사전-및-토크나이저)
   - [2-4. 평가](#2-4-평가)
-- [3. KorPatELECTRA 사용안내](#3-korpatelectra-사용안내)
+- [3. KorPatELECTRA 사용 안내](#3-korpatelectra-사용-안내)
   - [3-1. 요구사항](#3-1-요구사항)
   - [3-2. 토크나이저](#3-2-토크나이저)
   - [3-3. 파인튜닝](#3-3-파인튜닝)
-- [4. KorPatELECTRA 정책 및 제공](#4-korpatelctra-정책-및-제공)
-  - [4-1. 담당부서 및 모델제공 문의](#4-1-담당부서-및-모델제공-문의)
-  - [4-2. 사용신청서](#4-2-사용신청서)
-  - [4-3. 협약서](#4-3-협약서)
-  - [4-4. 라이선스](#4-4-라이선스)
+- [4. KorPatELECTRA 신청 안내](#4-korpatelectra-사용-안내)
+  - [4-1. 사용신청 및 담당부서 안내](#4-1-사용신청-및-담당부서-안내)
+  - [4-2. 사용신청 절차](#4-2-사용신청-절차)
+  - [4-3. 제공 파일](#4-3-제공-파일)
+  - [4-4. 관련 서식](#4-4-관련-서식)
  
 &nbsp;
 ## 1. KorPatELECTRA
@@ -73,7 +73,7 @@ ELECTRA가 BERT 보다 모든 태스크에서 높은 성능을 보였고, KorPat
 
 
 &nbsp;
-## 3. KorPatELECTRA 사용안내
+## 3. KorPatELECTRA 사용 안내
 ### 3-1. 요구사항
 |<center>프로그램명</centeer>|<center>버전</centeer>|<center>설치 안내 경로</centeer>|<center>필수</centeer>|
 |:--:|:--:|:--:|:--:|
@@ -127,7 +127,7 @@ Google electra에서 공개한 학습 방식과 동일하며, torch버전으로�
 - [KoELECTRA](https://github.com/monologg/KoELECTRA)
 
 &nbsp;
-## 4. KorPatELECTRA 사용 안내
+## 4. KorPatELECTRA 신청 안내
 ### 4-1. 사용신청 및 담당부서 안내
 한국특허정보원 언어모델에 관심 있는 기관·기업, 연구자를 대상으로 일정한 절차를 통해 보급을 수행 중에 있습니다. 아래의 사용신청 절차에 따라 사용신청서 및 협약서를 작성하시어 담당자의 이메일로 신청·접수를 하시면 됩니다.
 - 담당부서 : IP디지털혁신센터 지능정보전략팀
