@@ -3,7 +3,7 @@ KorPatELECTRA(Korean Patent ELECTRA)는 [한국특허정보원](https://www.kipi
 <br>특허분야 한국어 자연어처리 문제 해결 및 특허산업분야의 지능정보화 인프라 마련을 위해 기존 [Google ELECTRA](https://github.com/google-research/electra) 모델의 아키텍쳐를 기반으로 대용량 국내 특허문헌(약 466만 문헌, 5.4억 문장, 445억 토큰, 130GB)을 사전학습(pre-training)하였고, 무료로 제공하고 있습니다.
 <br>
 - KorPatELECTRA 관련 내용은 [KorPatELECTRA 논문](https://www.koreascience.or.kr/article/JAKO202209537230844.pdf)에서 확인 할 수 있습니다.
-- KorPatELECTRA [언론보도](http://www.aitimes.kr/news/articleView.html?idxno=23637) 소개
+- KorPatELECTRA [언론보도](https://www.e-patentnews.com/8665) 소개
 - Google BERT 기반 특허분야 특화된 언어모델 [KorPatBERT](https://github.com/kipi-ai/korpatbert) 소개
 &nbsp;
 
