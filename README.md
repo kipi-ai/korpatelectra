@@ -66,7 +66,7 @@ ELECTRA가 BERT 보다 모든 태스크에서 높은 성능을 보였고, KorPat
 특히, KorPatELECTRA는 특허분야 학습 데이터 셋에서 가장 높은 성능 달성하였습니다.
 |<center> </center>|<center>vocab size</center>|<center>NER</br>(화학 특허)</center>|<center>Classification</br>(특허 CPC분류)</center>|<center>MRC</br>(PatQuAD)</center>|
 |:--:|:--:|:--:|:--:|:--:|
-|Google BERT|11만|87.98|72.33|51.63/81.36|
+|Google BERT|11만|87.98|72.33|51.63/81.79|
 |<b>KorPatBERT</b>|<b>21400</b>|<b>87.89</b>|<b>76.32<b>|<b>76.21/85.61</b>|
 |KoELECTRA|35000|87.47|72.98|72.45/88.09|
 |<b>KorPatELECTRA</b>|<b>35000</b>|<b>91.01</b>|<b>73.90<b>|<b>77.47/89.85</b>|
